@@ -5,22 +5,22 @@
  *
  * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *
- * @attention  
- *  
+ * @attention
+ *
  * The MIT License (MIT)
- *  
+ *
  * Copyright (c) 2016 Jaydeep Dhrangdhariya
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be included in 
+ *
+ * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -36,7 +36,7 @@
 
 /**
  *******************************************************************************
- * Add header files below 
+ * Add header files below
  ******************************************************************************/
 #include "ex_linux_task1_1s.h"
 #include "ex_linux_task2_500ms.h"
@@ -57,19 +57,20 @@
   * @{
   */
 
-jos_task_t * jos_tasks[] = {
+jos_task_t * jos_tasks[] =
+{
 
-/**
-  * To add new tasks to schedular just use this macro below:
-  * 
-  *		JOS_TASK_ADD(name),
-  * 
-  * Do not forget to put comma ',' at the end the macro.
-  */
-/************************* Add the tasks below ********************************/
-JOS_TASK_ADD(task1),
-JOS_TASK_ADD(task2),
-/******************************************************************************/
+    /**
+      * To add new tasks to schedular just use this macro below:
+      *
+      *		JOS_TASK_ADD(name),
+      *
+      * Do not forget to put comma ',' at the end the macro.
+      */
+    /************************* Add the tasks below ****************************/
+    JOS_TASK_ADD(task1),
+    JOS_TASK_ADD(task2),
+    /**************************************************************************/
 };
 
 /**
@@ -81,7 +82,7 @@ JOS_TASK_ADD(task2),
 /** @defgroup   jos_config_module	JOS Configuration - Exported functions
   * @{
   */
-  
+
 /**
   * @brief  	Returns total number of jos tasks table/structure.
   * @param  	None
@@ -89,7 +90,7 @@ JOS_TASK_ADD(task2),
   */
 int jos_config_get_total_tasks(void)
 {
-	return sizeof(jos_tasks)/sizeof(jos_tasks[0]);
+    return sizeof(jos_tasks)/sizeof(jos_tasks[0]);
 }
 
 /**

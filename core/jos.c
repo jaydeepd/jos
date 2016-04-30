@@ -5,22 +5,22 @@
  *
  * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *
- * @attention  
- *  
+ * @attention
+ *
  * The MIT License (MIT)
- *  
+ *
  * Copyright (c) 2016 Jaydeep Dhrangdhariya
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
- * The above copyright notice and this permission notice shall be included in 
+ *
+ * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -96,15 +96,15 @@ jos_task_t * jos_current_task;			/*!< Holds pointer to the task currently in exe
   */
 void jos_init(void)
 {
-	/* Clear variables */
-	jos_tick = 0;
-	jos_max_tick = 0;
-	
-	/* Get total numbers of tasks */
-	jos_total_tasks = jos_config_get_total_tasks();
-	
-	/* Do port specific initialization */
-	jos_port_init();
+    /* Clear variables */
+    jos_tick = 0;
+    jos_max_tick = 0;
+
+    /* Get total numbers of tasks */
+    jos_total_tasks = jos_config_get_total_tasks();
+
+    /* Do port specific initialization */
+    jos_port_init();
 }
 
 /**
@@ -114,16 +114,17 @@ void jos_init(void)
   */
 void jos_irq_handler(void)
 {
-	/* Increment scheduler tick */
+    /* Increment scheduler tick */
     jos_tick++;
-    
+
     /* Execute all the tasks */
     jos_execute();
-    
+
     /* Clear scheduler tick if it is incremented upto maximum tick */
-    if(jos_tick > jos_max_tick) {
+    if(jos_tick > jos_max_tick)
+    {
         jos_tick = 0;
-	}
+    }
 }
 
 /**
@@ -133,18 +134,20 @@ void jos_irq_handler(void)
   */
 void jos_start(void)
 {
-	int i;
-	
+    int i;
+
     /* Find maximum tick time from all tasks */
     jos_max_tick = 0;
-    for(i = 0; i < jos_total_tasks; i++) {
-        if(jos_tasks[i]->exec_time > jos_max_tick) {
+    for(i = 0; i < jos_total_tasks; i++)
+    {
+        if(jos_tasks[i]->exec_time > jos_max_tick)
+        {
             jos_max_tick = jos_tasks[i]->exec_time;
-		}
+        }
     }
-	
-	/* Call port specific start function */
-	jos_port_start();
+
+    /* Call port specific start function */
+    jos_port_start();
 }
 
 /**
@@ -154,8 +157,8 @@ void jos_start(void)
   */
 void jos_sleep(void)
 {
-	/* Just call port specific sleep function */
-	jos_port_sleep();
+    /* Just call port specific sleep function */
+    jos_port_sleep();
 }
 
 /**
@@ -176,14 +179,16 @@ void jos_sleep(void)
 static void jos_execute(void)
 {
     int i;
-    
+
     /* Go though each task */
-    for(i = 0; i < jos_total_tasks; i++) {
-		/* Check if it is right time to execute task function */
-        if(jos_tick != 0 && (jos_tick % jos_tasks[i]->exec_time) == 0) {
-			jos_current_task = jos_tasks[i];
+    for(i = 0; i < jos_total_tasks; i++)
+    {
+        /* Check if it is right time to execute task function */
+        if(jos_tick != 0 && (jos_tick % jos_tasks[i]->exec_time) == 0)
+        {
+            jos_current_task = jos_tasks[i];
             jos_tasks[i]->task_func();
-		}
+        }
     }
 }
 
