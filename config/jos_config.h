@@ -1,8 +1,8 @@
 /***************************************************************************//**
- * @file		jos_config.h
- *                      This header file provides configuration related options of jos.
+ * @file        jos_config.h
+ *              This header file provides configuration related options of jos.
  *
- * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
+ * @author      Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *
  * @attention
  *
@@ -35,7 +35,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 
-/** @defgroup	jos_config_module
+/** @defgroup   jos_config_module
   * @{
   */
 
@@ -44,12 +44,12 @@
 /* Exported macros -----------------------------------------------------------*/
 /* Exported variables --------------------------------------------------------*/
 
-/** @defgroup	jos_config_exported_variables JOS configuration - Exported variables
+/** @defgroup   jos_config_exported_variables JOS configuration - Exported variables
   * @{
   */
 
 /**
-  *	This is a task list/table that holds all the tasks that needs to be
+  * This is a task list/table that holds all the tasks that needs to be
   * executed by jos.
   */
 extern jos_task_t * jos_tasks[];
@@ -60,7 +60,7 @@ extern jos_task_t * jos_tasks[];
 
 /* Exported functions --------------------------------------------------------*/
 
-/** @addtogroup	jos_config_exported_functions
+/** @addtogroup jos_config_exported_functions
   * @{
   */
 int jos_config_get_total_tasks(void);

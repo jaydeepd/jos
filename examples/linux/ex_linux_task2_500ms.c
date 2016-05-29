@@ -1,9 +1,9 @@
 /*******************************************************************************
- * @file       	ex_linux_task2_500ms.c
- *             	This source file implements a jos task which prints hello at
+ * @file        ex_linux_task2_500ms.c
+ *              This source file implements a jos task which prints hello at
  *              every 500 seconds.
  *
- * @author     	Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
+ * @author      Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *
  * @attention
  *
@@ -49,7 +49,7 @@ JOS_TASK_DEF(task2, task2_func, 500);
 
 static void task2_func(void)
 {
-    printf("Hello from task - 2 !\n");
+   printf("Hello from task - 2 !\n");
 }
 
 /* End of file ---------------------------------------------------------------*/

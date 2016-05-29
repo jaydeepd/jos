@@ -1,8 +1,8 @@
 /***************************************************************************//**
- * @file       	ex_linux_task2_500ms.h
- *             	This is header file for task 2.
+ * @file        ex_linux_task2_500ms.h
+ *              This is header file for task 2.
  *
- * @author     	Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
+ * @author      Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *
  * @attention
  *

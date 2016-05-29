@@ -1,9 +1,9 @@
 /***************************************************************************//**
- * @file		jos_config.c
- *                      This source file provides configuration (to add tasks)
- *                      to jos.
+ * @file        jos_config.c
+ *              This source file provides configuration (to add tasks)
+ *              to jos.
  *
- * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
+ * @author      Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *
  * @attention
  *
@@ -41,7 +41,7 @@
 
 /******************************************************************************/
 
-/** @defgroup   jos_config_module	JOS Configuration
+/** @defgroup   jos_config_module   JOS Configuration
   * @{
   */
 
@@ -52,22 +52,21 @@
 /* Private variables ---------------------------------------------------------*/
 /* Exported variables --------------------------------------------------------*/
 
-/** @defgroup   jos_config_module	JOS Configuration - Exported variables
+/** @defgroup   jos_config_module   JOS Configuration - Exported variables
   * @{
   */
 
-jos_task_t * jos_tasks[] =
-{
-    /**
-      * To add new tasks to schedular just use this macro below:
-      *
-      *		JOS_TASK_ADD(name),
-      *
-      * Do not forget to put comma ',' at the end the macro.
-      */
-    /************************* Add the tasks below ****************************/
+jos_task_t * jos_tasks[] = {
+   /**
+     * To add new tasks to schedular just use this macro below:
+     *
+     *     JOS_TASK_ADD(name),
+     *
+     * Do not forget to put comma ',' at the end the macro.
+     */
+   /************************* Add the tasks below ****************************/
 
-    /**************************************************************************/
+   /**************************************************************************/
 };
 
 /**
@@ -76,18 +75,18 @@ jos_task_t * jos_tasks[] =
 
 /* Exported functions --------------------------------------------------------*/
 
-/** @defgroup   jos_config_module	JOS Configuration - Exported functions
+/** @defgroup   jos_config_module   JOS Configuration - Exported functions
   * @{
   */
 
 /**
-  * @brief  	Returns total number of jos tasks table/structure.
-  * @param  	None
-  * @return 	Number of total tasks.
+  * @brief      Returns total number of jos tasks table/structure.
+  * @param      None
+  * @return     Number of total tasks.
   */
 int jos_config_get_total_tasks(void)
 {
-    return sizeof(jos_tasks)/sizeof(jos_tasks[0]);
+   return sizeof(jos_tasks) / sizeof(jos_tasks[0]);
 }
 
 /**
