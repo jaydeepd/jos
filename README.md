@@ -1,2 +1,2 @@
 # jos
-  An Event-loop inspired RTOS for microcontrollers.
+  A message-loop inspired RTOS for microcontrollers.
