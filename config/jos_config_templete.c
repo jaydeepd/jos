@@ -1,7 +1,7 @@
 /***************************************************************************//**
  * @file		jos_config.c
- *				This source file provides configuration (to add tasks)
- * 				to jos.
+ *                      This source file provides configuration (to add tasks)
+ *                      to jos.
  *
  * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *

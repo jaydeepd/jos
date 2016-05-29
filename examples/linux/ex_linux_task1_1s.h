@@ -1,6 +1,6 @@
 /*******************************************************************************
  * @file		ex_linux_task1_1s.h
- * 				This is header file for task 1.
+ *                      This is header file for task 1.
  *
  * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *

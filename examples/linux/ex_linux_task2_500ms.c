@@ -1,7 +1,7 @@
 /*******************************************************************************
  * @file       	ex_linux_task2_500ms.c
  *             	This source file implements a jos task which prints hello at
- * 				every 500 seconds.
+ *              every 500 seconds.
  *
  * @author     	Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *

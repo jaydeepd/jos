@@ -1,6 +1,6 @@
 /***************************************************************************//**
  * @file		jos_config.h
- *				This header file provides configuration related options of jos.
+ *                      This header file provides configuration related options of jos.
  *
  * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *

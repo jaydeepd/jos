@@ -1,7 +1,7 @@
 /***************************************************************************//**
  * @file		jos.c
- *				This source file provides scheduler related functionalities for
- * 				jos.
+ *                      This source file provides scheduler related functionalities for
+ *                      jos.
  *
  * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *

@@ -1,7 +1,7 @@
 /***************************************************************************//**
  * @file		main.c
- *				This source file provides main function for this example
- * 				application.
+ *                      This source file provides main function for this example
+ *                      application.
  *
  * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *

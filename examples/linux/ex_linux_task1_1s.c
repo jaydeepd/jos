@@ -1,7 +1,7 @@
 /*******************************************************************************
  * @file		ex_linux_task1_1s.c
- *				This source file implements a jos task which prints hello at
- * 				every 1 seconds.
+ *                      This source file implements a jos task which prints hello at
+ *                      every 1 seconds.
  *
  * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *

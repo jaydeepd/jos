@@ -1,7 +1,7 @@
 /***************************************************************************//**
  * @file		jos_port.h
- *				This header file provides port specific prototypes and macros in
- * 				generic term.
+ *                      This header file provides port specific prototypes and macros in
+ *                      generic term.
  *
  * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *

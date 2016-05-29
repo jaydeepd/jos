@@ -1,6 +1,6 @@
 /***************************************************************************//**
  * @file		jos_port_linux.c
- * 				This source file provides jos port for a GNU/linux system.
+ *                      This source file provides jos port for a GNU/linux system.
  *
  * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *

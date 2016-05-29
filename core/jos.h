@@ -1,7 +1,7 @@
 /***************************************************************************//**
  * @file		jos.h
- *				This header file provides scheduler related functionalities for
- * 				jos.
+ *                      This header file provides scheduler related functionalities for
+ *                      jos.
  *
  * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *
