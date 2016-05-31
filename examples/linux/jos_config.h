@@ -1,6 +1,6 @@
 /***************************************************************************//**
- * @file        jos.h
- *              This header file provides scheduler related functionalities for
+ * @file        jos_config.h
+ *              This header file serves for configuration options of
  *              jos.
  *
  * @author      Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
@@ -31,76 +31,18 @@
  ******************************************************************************/
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef JOS_H
-#define JOS_H
+#ifndef JOS_CONFIG_H
+#define JOS_CONFIG_H
 
 /* Includes ------------------------------------------------------------------*/
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-
-/** @addtogroup jos_module
- *  @{
- */
-
 /* Exported types ------------------------------------------------------------*/
-
-/** @defgroup   jos_exported_types JOS core - Exported types
-  * @{
-  */
-
-typedef void (*jos_task_function)(void);    /*!< Task function prototype for jos */
-
-typedef struct jos_task {
-   jos_task_function task_func;
-   int exec_time;
-} jos_task_t;                               /*!< Stucture that holds task relateed items */
-
-typedef enum {
-   JOS_OK = 0,
-   JOS_ERROR,
-} jos_status;                               /*!< jos status codes */
-
-/**
-  * @}
-  */
-
 /* Exported constants --------------------------------------------------------*/
+#define JOS_MAX_TASKS       2      /*!< Maximum tasks user can define */
+
 /* Exported macros -----------------------------------------------------------*/
 /* Exported variables --------------------------------------------------------*/
-
-/** @addtogroup jos_exported_variables
-  * @{
-  */
-
-extern jos_task_t * jos_current_task;
-
-/**
-  * @}
-  */
-
 /* Exported functions --------------------------------------------------------*/
 
-/** @addtogroup jos_exported_functions
-  * @{
-  */
-
-extern void jos_init(void);
-extern void jos_irq_handler(void);
-
-extern void jos_start(void);
-extern void jos_sleep(void);
-
-extern jos_status jos_task_add(const jos_task_t * task, jos_task_function func, int time);
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
-
-#endif /* JOS_H */
+#endif /* JOS_CONFIG_H */
 
 /* End of file ---------------------------------------------------------------*/

@@ -44,6 +44,20 @@
 /* Private constants ---------------------------------------------------------*/
 /* Private macros ------------------------------------------------------------*/
 /* Private types -------------------------------------------------------------*/
+/** @defgroup   jos_private_types   JOS Core - Private variables
+  * @{
+  */
+
+/**
+  * This is a task list/table that holds all the tasks that needs to be
+  * executed by jos.
+  */
+static jos_task_t * jos_tasks[JOS_MAX_TASKS];
+
+/**
+  * @}
+  */
+
 /* Private function prototypes -----------------------------------------------*/
 
 /** @addtogroup jos_private_functions
@@ -77,7 +91,7 @@ static uint32_t jos_total_tasks = 0;   /*!< Holds total number of jos tasks */
   * @{
   */
 
-jos_task_t * os_current_task;      /*!< Holds pointer to the task currently in execution */
+jos_task_t * jos_current_task;      /*!< Holds pointer to the task currently in execution */
 
 /**
   * @}
@@ -99,9 +113,6 @@ void jos_init(void)
    /* Clear variables */
    jos_tick = 0;
    jos_max_tick = 0;
-
-   /* Get total numbers of tasks */
-   jos_total_tasks = jos_config_get_total_tasks();
 
    /* Do port specific initialization */
    jos_port_init();
@@ -157,6 +168,30 @@ void jos_sleep(void)
 {
    /* Just call port specific sleep function */
    jos_port_sleep();
+}
+
+/**
+  * @brief      Add new task to task list.
+  * @param      task        task pointer which needs to be added in list
+  *             func        task function to be called
+  *             time        time interval for callback
+  * @return     JOS_OK      if task is added sucessfully
+  *             JOS_ERROR   error occured
+  */
+jos_status jos_task_add(const jos_task_t * task, jos_task_function func, int time)
+{
+   jos_status status = JOS_ERROR;
+
+   if (jos_total_tasks < JOS_MAX_TASKS) {
+      jos_tasks[jos_total_tasks] = task;
+      jos_tasks[jos_total_tasks]->task_func = func;
+      jos_tasks[jos_total_tasks]->exec_time = time;
+      jos_total_tasks++;
+
+      status = JOS_OK;
+   }
+
+   return status;
 }
 
 /**

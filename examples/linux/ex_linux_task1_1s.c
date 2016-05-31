@@ -41,10 +41,17 @@
 static void task1_func(void);
 
 /* Private variables ---------------------------------------------------------*/
-/* Exported variables --------------------------------------------------------*/
-JOS_TASK_DEF(task1, task1_func, 1000);
+jos_task_t task1;
 
+/* Exported variables --------------------------------------------------------*/
 /* Exported functions --------------------------------------------------------*/
+
+void task1_init(void)
+{
+   /* add task1 to os' task list */
+   jos_task_add(&task1, task1_func, 1000);
+}
+
 /* Private functions ---------------------------------------------------------*/
 
 static void task1_func(void)

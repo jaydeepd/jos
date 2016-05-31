@@ -32,6 +32,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "jos.h"
+#include "ex_linux_task1_1s.h"
+#include "ex_linux_task2_500ms.h"
 
 /** @defgroup   main_module
   * @{
@@ -47,6 +49,10 @@
 int main(void)
 {
    jos_init();
+
+   task1_init();
+
+   task2_init();
 
    jos_start();
 
