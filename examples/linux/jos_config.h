@@ -1,7 +1,7 @@
 /***************************************************************************//**
- * @file        jos_port.h
- *              This header file provides port specific prototypes and macros in
- *              generic term.
+ * @file        jos_config.h
+ *              This header file serves for configuration options of
+ *              jos.
  *
  * @author      Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *
@@ -31,39 +31,18 @@
  ******************************************************************************/
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef JOS_PORT_H
-#define JOS_PORT_H
+#ifndef JOS_CONFIG_H
+#define JOS_CONFIG_H
 
 /* Includes ------------------------------------------------------------------*/
-#include "jos.h"
-
-/** @addtogroup jos_port_module
-  * @{
-  */
-
-/* Exported constants --------------------------------------------------------*/
-/* Exported macros -----------------------------------------------------------*/
 /* Exported types ------------------------------------------------------------*/
+/* Exported constants --------------------------------------------------------*/
+#define JOS_MAX_TASKS       2      /*!< Maximum tasks user can define */
+
+/* Exported macros -----------------------------------------------------------*/
 /* Exported variables --------------------------------------------------------*/
 /* Exported functions --------------------------------------------------------*/
 
-/** @addtogroup jos_port_exported_functions
-  * @{
-  */
-
-extern void jos_port_init(void);
-
-extern void jos_port_start(void);
-extern void jos_port_sleep(void);
-
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */
-
-#endif /* JOS_PORT_H */
+#endif /* JOS_CONFIG_H */
 
 /* End of file ---------------------------------------------------------------*/

@@ -1,8 +1,9 @@
 /***************************************************************************//**
- * @file		jos_config.h
- *				This header file provides configuration related options of jos.
+ * @file        jos_config_templete.h
+ *              This header file serves as templete for configuration options of
+ *              jos.
  *
- * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
+ * @author      Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *
  * @attention
  *
@@ -30,49 +31,29 @@
  ******************************************************************************/
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef JOS_CONFIG_H
-#define JOS_CONFIG_H
+#ifndef JOS_CONFIG_TEMPLETE_H
+#define JOS_CONFIG_TEMPLETE_H
+
+#error "Kindly do not include this templete file ! This file is for reference only !"
 
 /* Includes ------------------------------------------------------------------*/
 
-/** @defgroup	jos_config_module
+/** @defgroup   jos_config_module
   * @{
   */
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
+#define JOS_MAX_TASKS       255      /*!< Maximum tasks user can define */
+
 /* Exported macros -----------------------------------------------------------*/
 /* Exported variables --------------------------------------------------------*/
-
-/** @defgroup	jos_config_exported_variables JOS configuration - Exported variables
-  * @{
-  */
-
-/**
-  *	This is a task list/table that holds all the tasks that needs to be
-  * executed by jos.
-  */
-extern jos_task_t * jos_tasks[];
-
-/**
-  * @}
-  */
-
 /* Exported functions --------------------------------------------------------*/
 
-/** @addtogroup	jos_config_exported_functions
-  * @{
-  */
-int jos_config_get_total_tasks(void);
-
 /**
   * @}
   */
 
-/**
-  * @}
-  */
-
-#endif /* JOS_CONFIG_H */
+#endif /* JOS_CONFIG_TEMPLETE_H */
 
 /* End of file ---------------------------------------------------------------*/

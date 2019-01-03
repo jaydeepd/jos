@@ -1,9 +1,9 @@
 /***************************************************************************//**
- * @file		main.c
- *				This source file provides main function for this example
- * 				application.
+ * @file        main.c
+ *              This source file provides main function for this example
+ *              application.
  *
- * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
+ * @author      Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *
  * @attention
  *
@@ -32,6 +32,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "jos.h"
+#include "ex_linux_task1_1s.h"
+#include "ex_linux_task2_500ms.h"
 
 /** @defgroup   main_module
   * @{
@@ -46,16 +48,19 @@
 /* Exported functions --------------------------------------------------------*/
 int main(void)
 {
-    jos_init();
+   jos_init();
 
-    jos_start();
+   task1_init();
 
-    while(1)
-    {
-        jos_sleep();
-    }
+   task2_init();
 
-    return 0;
+   jos_start();
+
+   while (1) {
+      jos_sleep();
+   }
+
+   return 0;
 }
 
 /* Private functions ---------------------------------------------------------*/

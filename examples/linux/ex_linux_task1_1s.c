@@ -1,9 +1,9 @@
 /*******************************************************************************
- * @file		ex_linux_task1_1s.c
- *				This source file implements a jos task which prints hello at
- * 				every 1 seconds.
+ * @file        ex_linux_task1_1s.c
+ *              This source file implements a jos task which prints hello at
+ *              every 1 seconds.
  *
- * @author		Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
+ * @author      Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *
  * @attention
  *
@@ -41,15 +41,22 @@
 static void task1_func(void);
 
 /* Private variables ---------------------------------------------------------*/
-/* Exported variables --------------------------------------------------------*/
-JOS_TASK_DEF(task1, task1_func, 1000);
+jos_task_t task1;
 
+/* Exported variables --------------------------------------------------------*/
 /* Exported functions --------------------------------------------------------*/
+
+void task1_init(void)
+{
+   /* add task1 to os' task list */
+   jos_task_add(&task1, task1_func, 1000);
+}
+
 /* Private functions ---------------------------------------------------------*/
 
 static void task1_func(void)
 {
-    printf("Hello from task - 1 !\n");
+   printf("Hello from task - 1 !\n");
 }
 
 /* End of file ---------------------------------------------------------------*/

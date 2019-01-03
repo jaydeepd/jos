@@ -1,8 +1,8 @@
 /***************************************************************************//**
- * @file       	ex_linux_task2_500ms.h
- *             	This is header file for task 2.
+ * @file        ex_linux_task2_500ms.h
+ *              This is header file for task 2.
  *
- * @author     	Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
+ * @author      Jaydeep Dhrangdhariya (jaydeep.gajjar90@gmail.com)
  *
  * @attention
  *
@@ -34,15 +34,13 @@
 #define EX_LINUX_TASK2_500MS_H
 
 /* Includes ------------------------------------------------------------------*/
-#include "jos.h"
-
 /* Exported constants --------------------------------------------------------*/
 /* Exported macros -----------------------------------------------------------*/
 /* Exported types ------------------------------------------------------------*/
 /* Exported variables --------------------------------------------------------*/
-JOS_TASK(task2);
-
 /* Exported functions --------------------------------------------------------*/
+
+extern void task2_init(void);
 
 #endif /* EX_LINUX_TASK2_500MS_H */
 
